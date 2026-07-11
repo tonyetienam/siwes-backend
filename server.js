@@ -13,6 +13,7 @@ const studentRoutes = require('./routes/studentRoutes');
 const supervisorRoutes = require('./routes/supervisorRoutes');
 const coordinatorRoutes = require('./routes/coordinatorRoutes');
 const studentActivityRoutes = require('./routes/studentActivityRoutes');
+const academicRoutes = require('./routes/academicRoutes'); // <--- Added this line
 
 const app = express();
 
@@ -54,6 +55,7 @@ app.use('/api', studentRoutes);
 app.use('/api', supervisorRoutes);
 app.use('/api', coordinatorRoutes);
 app.use('/api', studentActivityRoutes);
+app.use('/api', academicRoutes); // <--- Added this line
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => console.log(`Backend API running on port ${PORT}`));
